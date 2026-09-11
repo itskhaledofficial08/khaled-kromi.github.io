@@ -3,541 +3,1026 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="خالد كرومي — مكتبة أدبية تضم رواية ملحمة الوريث الأخير، أكثر من 1000 عمل مجاني من فهرس مفتوح، ومراجعات للروايات المحمية بحقوق النشر.">
+<meta name="description" content="خالد كرومي — كاتب وروائي ومؤلف ملحمة الوريث الأخير.">
 <title>خالد كرومي | مكتبة الروايات والكتب</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{--bg:#05070b;--panel:#0d1118;--panel2:#111722;--gold:#e0b75f;--gold2:#f4d58d;--text:#f8f5ee;--muted:#9ea5b1;--line:#242b36;--green:#20c978;--blue:#2f7cff;--shadow:0 24px 80px #0008}
+:root{
+--bg:#07090d;
+--panel:#10141b;
+--panel2:#151b24;
+--gold:#d8ad55;
+--gold2:#f1d38a;
+--text:#f5f2ea;
+--muted:#aab1bc;
+--line:#252d39;
+}
+
 *{box-sizing:border-box}
+
 html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(circle at 15% 0,#182132 0,transparent 35%),radial-gradient(circle at 90% 20%,#191309 0,transparent 28%),var(--bg);color:var(--text);font-family:Cairo,Arial,sans-serif}
-a{text-decoration:none;color:inherit}
-button,input{font:inherit}
-header{position:sticky;top:0;z-index:50;background:#05070bdd;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.nav{max-width:1250px;margin:auto;padding:15px 22px;display:flex;align-items:center;gap:25px}
-.brand{display:flex;align-items:center;gap:12px;margin-left:auto}
-.brand-mark{width:44px;height:44px;border:1px solid #8d6c32;border-radius:13px;display:grid;place-items:center;color:var(--gold);font-size:24px;background:linear-gradient(145deg,#19160f,#0b0d12)}
-.brand strong{display:block;font-size:21px}
-.brand small{color:var(--gold);font-size:11px}
-.navlinks{display:flex;gap:18px;color:#cbd0d8;font-size:14px}
-.navlinks a:hover{color:var(--gold)}
-.navsearch{margin-right:auto;display:flex;background:#0d1118;border:1px solid #313846;border-radius:999px;padding:4px;min-width:280px}
-.navsearch input{width:100%;background:transparent;border:0;outline:0;color:white;padding:9px 13px}
-.navsearch button{border:0;background:var(--gold);border-radius:999px;padding:8px 13px;cursor:pointer}
-.hero{max-width:1250px;margin:auto;padding:75px 22px 45px;display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-weight:800;font-size:13px}
-.eyebrow:before{content:"";width:28px;height:1px;background:var(--gold)}
-h1{font-family:"Playfair Display",serif;font-size:clamp(46px,7vw,86px);line-height:1.02;margin:15px 0 18px;letter-spacing:-2px}
-h1 span{color:var(--gold)}
-.hero p{max-width:720px;color:#b8bec8;line-height:2;font-size:17px}
-.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid #394251;border-radius:13px;padding:12px 18px;cursor:pointer;font-weight:800;background:#10151e;color:white}
-.btn.primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#15120b;border-color:var(--gold)}
-.btn.green{background:#0e2118;border-color:#17643e;color:#7df0b0}
-.hero-book{min-height:470px;border:1px solid #403622;border-radius:30px;background:linear-gradient(145deg,#20180d,#0b0e14 65%);box-shadow:var(--shadow);padding:26px;position:relative;overflow:hidden}
-.book-visual{height:310px;border-radius:18px;background:radial-gradient(circle at 50% 28%,#7c5a25,#11151c 55%),linear-gradient(145deg,#251a0c,#080a0f);border:1px solid #7c6032;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:25px;position:relative;overflow:hidden}
-.book-visual .clock{font-size:70px;opacity:.9}
-.book-visual b{font-family:"Playfair Display";font-size:31px;color:#f7dfa6}
-.book-visual small{color:#d9c49a;margin-top:8px}
-.price-row{display:flex;align-items:end;justify-content:space-between;margin-top:18px}
-.price{font-size:32px;font-weight:900;color:var(--gold2)}
-.old{text-decoration:line-through;color:#68707b;font-size:13px}
-.rating{color:var(--gold);font-weight:800}
-.stats{max-width:1250px;margin:auto;padding:0 22px 25px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.stat{padding:18px;background:linear-gradient(145deg,#0e131b,#0b0e14);border:1px solid var(--line);border-radius:18px;text-align:center}
-.stat b{display:block;font-size:25px;color:var(--gold2)}
-.stat span{font-size:12px;color:var(--muted)}
-section{max-width:1250px;margin:auto;padding:45px 22px}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}
-.section-head h2{margin:0;font-size:31px}
-.section-head p{margin:7px 0 0;color:var(--muted)}
-.pill{padding:7px 11px;border:1px solid #3a424f;border-radius:999px;color:#cbd0d8;font-size:12px}
-.filters{display:flex;gap:8px;overflow:auto;padding-bottom:12px}
-.filter{white-space:nowrap;background:#0d1118;border:1px solid var(--line);color:#cfd4dc;border-radius:999px;padding:9px 15px;cursor:pointer}
-.filter.active,.filter:hover{border-color:var(--gold);color:var(--gold2)}
-.feature{display:grid;grid-template-columns:.7fr 1.3fr;gap:30px;align-items:center;background:linear-gradient(135deg,#19140c,#0d1118 68%);border:1px solid #4b3a21;border-radius:30px;padding:30px;box-shadow:var(--shadow)}
-.feature-cover{min-height:380px;border-radius:20px;border:1px solid #8c6b36;background:radial-gradient(circle at 50% 35%,#72501c,#0c1119 55%);display:flex;align-items:center;justify-content:center;text-align:center;font-family:"Playfair Display";font-size:44px;color:#f4d58d;padding:35px}
-.feature h2{font-family:"Playfair Display";font-size:44px;margin:8px 0;color:#f4d58d}
-.feature p{color:#bec4ce;line-height:2;font-size:16px}
-.review-box{margin-top:22px;padding:18px;border:1px solid #2c333f;border-radius:17px;background:#090d13}
-.review-box strong{color:var(--gold2)}
-.paybox{margin-top:20px;padding:20px;border:1px solid #4b3a21;border-radius:20px;background:#0a0e14}
-.payrow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
-.payrow:last-child{border:0}
-.copy{background:#171d26;border:1px solid #394251;color:#eee;border-radius:9px;padding:7px 10px;cursor:pointer}
-.whatsapp{background:#0c2519;border-color:#1b6a42;color:#76efac}
-.library-tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-.library-search{flex:1;min-width:230px;background:#0d1118;border:1px solid #303845;border-radius:13px;padding:12px 15px;color:white;outline:0}
-.free-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
-.free-card{background:linear-gradient(145deg,#0e131b,#0a0d13);border:1px solid var(--line);border-radius:18px;overflow:hidden}
-.free-cover{height:225px;background:linear-gradient(145deg,#1d2632,#090c12);display:flex;align-items:center;justify-content:center;padding:12px;position:relative}
-.free-cover img{width:100%;height:100%;object-fit:cover;border-radius:9px}
-.free-cover .num{position:absolute;top:9px;right:9px;background:#000b;border:1px solid #ffffff22;border-radius:999px;padding:4px 8px;font-size:10px;color:#f5d58b}
-.free-body{padding:13px}
-.free-body h3{font-size:15px;margin:0 0 5px;line-height:1.5}
-.free-body p{font-size:12px;color:var(--muted);margin:0 0 9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.free-actions{display:flex;gap:6px}
-.mini-btn{flex:1;padding:8px;border-radius:9px;border:1px solid #303845;background:#141a23;color:#eee;cursor:pointer;font-size:11px}
-.mini-btn.gold{background:#1b160d;border-color:#665027;color:#f3d48a}
-.loadmore{display:block;margin:25px auto 0}
-.loading{text-align:center;padding:35px;color:var(--muted)}
-.source-note{margin-top:14px;color:#727a86;font-size:11px;line-height:1.8}
-.review-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.review-card{background:#0d1118;border:1px solid var(--line);border-radius:18px;padding:19px}
-.review-card .type{color:var(--gold);font-size:11px}
-.review-card h3{margin:7px 0}
-.review-card p{color:#9fa7b2;font-size:13px;line-height:1.9}
-.review-card button{width:100%;margin-top:5px}
-.about{background:linear-gradient(145deg,#0e131b,#0b0e14);border:1px solid var(--line);border-radius:25px;padding:28px;line-height:2;color:#b9c0ca}
-.about strong{color:var(--gold2)}
-footer{border-top:1px solid var(--line);padding:35px 22px;text-align:center;color:#7d8590}
-.legal{font-size:11px;color:#666e79;line-height:1.8;margin-top:15px}
-.modal{display:none;position:fixed;inset:0;background:#000c;z-index:100;align-items:center;justify-content:center;padding:18px}
-.modal.show{display:flex}
-.dialog{width:min(700px,100%);max-height:90vh;overflow:auto;background:#0d1118;border:1px solid #394251;border-radius:24px;padding:27px;position:relative}
-.close{position:absolute;left:15px;top:10px;border:0;background:transparent;color:#89919c;font-size:29px;cursor:pointer}
-.dialog h2{font-family:"Playfair Display";font-size:35px;color:var(--gold2);margin:5px 0 15px}
-.dialog p{color:#c0c6cf;line-height:2}
-.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(20px);background:#161d27;border:1px solid #3a4351;padding:10px 15px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:200}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.curated-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px}
-.curated-card{background:linear-gradient(145deg,#121821,#0b0f15);border:1px solid #2c3542;border-radius:20px;overflow:hidden}
-.curated-cover{height:210px;background:radial-gradient(circle at 50% 20%,#80622b,#10151c 62%);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:#f4d58d;font-family:'Playfair Display',serif;font-size:25px;font-weight:700}
-.curated-body{padding:16px}
-.curated-body h3{margin:0 0 7px;font-size:17px}
-.curated-body p{margin:0 0 13px;color:#9da6b2;font-size:12px}
-.curated-actions{display:flex;gap:8px}
-.curated-actions a{flex:1}
-.legal-mini{margin-top:16px;padding:12px 15px;border-radius:13px;background:#101720;border:1px solid #263140;color:#8f9aaa;font-size:12px;line-height:1.8}
-.source-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-@media(max-width:1050px){.free-grid{grid-template-columns:repeat(4,1fr)}.review-grid{grid-template-columns:repeat(3,1fr)}.navlinks{display:none}.curated-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px}.stats{grid-template-columns:repeat(2,1fr)}.feature{grid-template-columns:1fr}.free-grid{grid-template-columns:repeat(3,1fr)}.review-grid{grid-template-columns:repeat(2,1fr)}.navsearch{display:none}.curated-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.hero h1{font-size:47px}.stats{grid-template-columns:1fr 1fr}.free-grid{grid-template-columns:repeat(2,1fr);gap:10px}.review-grid{grid-template-columns:1fr}.free-cover{height:190px}.feature{padding:18px}.feature-cover{min-height:280px;font-size:35px}.feature h2{font-size:34px}.section-head{display:block}.price-row{align-items:center}.curated-grid{grid-template-columns:1fr 1fr}.curated-cover{height:175px;font-size:20px}}
+
+body{
+margin:0;
+background:
+radial-gradient(circle at 80% 0%,#21190f 0,#07090d 40%);
+color:var(--text);
+font-family:Cairo,Arial,sans-serif;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.wrap{
+width:min(1180px,92%);
+margin:auto;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:50;
+background:rgba(7,9,13,.94);
+backdrop-filter:blur(15px);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+.brand{
+font-size:23px;
+font-weight:800;
+}
+
+.brand span{
+color:var(--gold);
+}
+
+nav{
+display:flex;
+gap:20px;
+font-size:14px;
+color:#d8dce3;
+}
+
+nav a:hover{
+color:var(--gold);
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:12px 20px;
+border-radius:12px;
+font-weight:800;
+border:1px solid var(--gold);
+cursor:pointer;
+}
+
+.primary{
+background:var(--gold);
+color:#17120a;
+}
+
+.ghost{
+color:var(--gold2);
+background:transparent;
+}
+
+.hero{
+padding:65px 0 45px;
+}
+
+.heroBox{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:35px;
+align-items:center;
+}
+
+.kicker{
+color:var(--gold);
+font-weight:800;
+}
+
+.hero h1{
+font-family:"Playfair Display",serif;
+font-size:clamp(45px,7vw,80px);
+line-height:1;
+margin:12px 0;
+}
+
+.hero p{
+color:var(--muted);
+font-size:18px;
+line-height:2;
+}
+
+.actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.heroCover{
+min-height:440px;
+border-radius:22px;
+overflow:hidden;
+background:linear-gradient(145deg,#2b2115,#090b0e 70%);
+border:1px solid #4c3a20;
+box-shadow:0 25px 70px #0009;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:28px;
+}
+
+.bookCover{
+width:min(290px,75%);
+aspect-ratio:2/3;
+background:
+linear-gradient(145deg,#151515,#332617);
+border:3px solid var(--gold);
+box-shadow:0 20px 45px #000;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:space-between;
+text-align:center;
+padding:28px 20px;
+}
+
+.bookCover .top{
+font-size:12px;
+color:var(--gold2);
+letter-spacing:2px;
+}
+
+.bookCover h2{
+font-family:"Playfair Display",serif;
+font-size:32px;
+line-height:1.35;
+margin:0;
+}
+
+.clock{
+font-size:75px;
+filter:drop-shadow(0 0 15px #d8ad5566);
+}
+
+.bookCover small{
+color:#ddd;
+}
+
+section{
+padding:45px 0;
+}
+
+.sectionHead{
+display:flex;
+justify-content:space-between;
+align-items:end;
+margin-bottom:22px;
+}
+
+.sectionHead h2{
+font-size:30px;
+margin:0;
+}
+
+.sectionHead p{
+color:var(--muted);
+}
+
+.search{
+display:flex;
+gap:10px;
+margin:20px 0;
+}
+
+.search input,
+.search select{
+flex:1;
+background:var(--panel);
+color:var(--text);
+border:1px solid var(--line);
+padding:14px;
+border-radius:12px;
+outline:none;
+}
+
+.search input:focus{
+border-color:var(--gold);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:18px;
+}
+
+.card{
+background:linear-gradient(180deg,#121720,#0d1117);
+border:1px solid var(--line);
+border-radius:16px;
+overflow:hidden;
+transition:.25s;
+display:flex;
+flex-direction:column;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#8e6c35;
+box-shadow:0 18px 35px #0008;
+}
+
+.cover{
+aspect-ratio:2/3;
+background:#1a1f27;
+position:relative;
+overflow:hidden;
+}
+
+.cover img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.tag{
+position:absolute;
+top:9px;
+right:9px;
+background:#080a0dcc;
+border:1px solid #ffffff22;
+border-radius:999px;
+padding:4px 8px;
+font-size:11px;
+}
+
+.cardBody{
+padding:13px;
+}
+
+.card h3{
+font-size:16px;
+margin:0 0 5px;
+line-height:1.55;
+}
+
+.author{
+color:var(--muted);
+font-size:12px;
+min-height:38px;
+}
+
+.cardBtns{
+display:flex;
+gap:7px;
+margin-top:11px;
+}
+
+.mini{
+flex:1;
+padding:8px;
+border-radius:9px;
+text-align:center;
+font-size:12px;
+font-weight:800;
+border:1px solid #554525;
+color:var(--gold2);
+}
+
+.mini.main{
+background:var(--gold);
+color:#17120a;
+}
+
+.feature{
+background:linear-gradient(135deg,#17140f,#0f1319);
+border:1px solid #5d4725;
+border-radius:22px;
+padding:26px;
+display:grid;
+grid-template-columns:190px 1fr;
+gap:25px;
+align-items:center;
+}
+
+.featureCover{
+width:190px;
+aspect-ratio:2/3;
+}
+
+.featureCover .bookCover{
+width:100%;
+height:100%;
+padding:17px;
+}
+
+.featureCover .bookCover h2{
+font-size:22px;
+}
+
+.featureCover .clock{
+font-size:45px;
+}
+
+.feature h2{
+font-size:31px;
+margin:0 0 8px;
+}
+
+.feature p{
+color:var(--muted);
+line-height:1.9;
+}
+
+.price{
+font-size:28px;
+color:var(--gold2);
+font-weight:800;
+}
+
+.pay{
+margin-top:18px;
+background:#0b0f14;
+border:1px solid var(--line);
+border-radius:15px;
+padding:15px;
+}
+
+.pay b{
+color:var(--gold2);
+}
+
+.whatsapp{
+background:#218c4b!important;
+border-color:#218c4b!important;
+color:white!important;
+}
+
+.empty{
+grid-column:1/-1;
+text-align:center;
+color:var(--muted);
+padding:40px;
+}
+
+footer{
+border-top:1px solid var(--line);
+margin-top:50px;
+padding:35px 0;
+color:var(--muted);
+text-align:center;
+}
+
+@media(max-width:1000px){
+.grid{
+grid-template-columns:repeat(4,1fr);
+}
+}
+
+@media(max-width:760px){
+
+nav{
+display:none;
+}
+
+.heroBox{
+grid-template-columns:1fr;
+}
+
+.heroCover{
+min-height:380px;
+}
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.feature{
+grid-template-columns:120px 1fr;
+}
+
+.featureCover{
+width:120px;
+}
+
+.sectionHead{
+display:block;
+}
+
+.search{
+flex-direction:column;
+}
+
+}
+
+@media(max-width:430px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.card h3{
+font-size:14px;
+}
+
+.feature{
+grid-template-columns:1fr;
+}
+
+.featureCover{
+margin:auto;
+}
+
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="nav">
+<div class="wrap nav">
+
 <a class="brand" href="#top">
-<div class="brand-mark">✦</div>
-<div><strong>خالد كرومي</strong><small>مكتبة أدبية</small></div>
+خالد <span>كرومي</span>
 </a>
 
-<nav class="navlinks">
-<a href="#free">1000+ مجاني</a>
-<a href="#famous-free">كلاسيكيات</a>
-<a href="#reviews">مراجعات</a>
-<a href="#featured">روايتي</a>
-<a href="#about">عن الموقع</a>
+<nav>
+<a href="#top">الرئيسية</a>
+<a href="#novel">روايتي</a>
+<a href="#books">المكتبة</a>
+<a href="#popular">الأشهر</a>
+<a href="#contact">تواصل</a>
 </nav>
 
-<div class="navsearch">
-<input id="topSearch" placeholder="ابحث عن رواية أو مؤلف">
-<button onclick="jumpSearch()">⌕</button>
-</div>
+<a class="btn ghost" href="#books">
+ابدأ القراءة
+</a>
+
 </div>
 </header>
+
 
 <main id="top">
 
 <section class="hero">
+
+<div class="wrap heroBox">
+
 <div>
-<div class="eyebrow">مكتبة خالد كرومي الرسمية</div>
-<h1>اقرأ أكثر.<br><span>اكتشف أكثر.</span></h1>
-<p>منصة أدبية تجمع روايتك الأصلية، مراجعات ذكية للروايات المعروفة، وفهرسًا ضخمًا من الأعمال المجانية المتاحة عبر مصادر قانونية مفتوحة.</p>
 
-<div class="hero-actions">
-<a class="btn primary" href="#free">📚 تصفح المكتبة المجانية</a>
-<a class="btn" href="#featured">⭐ اكتشف ملحمة الوريث الأخير</a>
-</div>
+<div class="kicker">
+كاتب وروائي جزائري
 </div>
 
-<div class="hero-book">
-<div class="book-visual">
-<div class="clock">◷</div>
-<b>ملحمة الوريث الأخير</b>
-<small>خالد كرومي</small>
+<h1>
+خالد كرومي
+</h1>
+
+<p>
+مساحة أدبية حقيقية للقراءة والاكتشاف،
+تضم رواية <b>ملحمة الوريث الأخير</b>
+وكلاسيكيات عالمية مع أغلفة وصور وروابط قراءة مباشرة.
+</p>
+
+<div class="actions">
+
+<a class="btn primary" href="#novel">
+اكتشف روايتي
+</a>
+
+<a class="btn ghost" href="#books">
+تصفح الكتب
+</a>
+
 </div>
 
-<div class="price-row">
-<div>
-<div class="old">1200 دج</div>
-<div class="price">900 دج</div>
 </div>
-<div class="rating">★★★★★<br><small style="color:#8e96a1">رواية أصلية</small></div>
+
+
+<div class="heroCover">
+
+<div class="bookCover">
+
+<div class="top">
+رواية خالد كرومي
 </div>
+
+<div class="clock">
+◷
 </div>
+
+<h2>
+ملحمة<br>
+الوريث الأخير
+</h2>
+
+<small>
+الزمن • الذاكرة • الاختيار
+</small>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<div class="stats">
-<div class="stat"><b id="freeCount">1000+</b><span>عمل مجاني عند توفر المصدر</span></div>
-<div class="stat"><b>20+</b><span>مراجعة لروايات معروفة</span></div>
-<div class="stat"><b>900 دج</b><span>سعر روايتك</span></div>
-<div class="stat"><b>100%</b><span>متوافق مع الهاتف</span></div>
-</div>
 
-<section id="featured">
-<div class="section-head">
-<div><h2>⭐ العمل المميز</h2><p>روايتك في قلب الموقع</p></div>
-<span class="pill">خالد كرومي</span>
-</div>
+<section id="novel">
+
+<div class="wrap">
 
 <div class="feature">
-<div class="feature-cover">ملحمة<br>الوريث الأخير<br><small style="font:14px Cairo;color:#c8ad74">خالد كرومي</small></div>
+
+<div class="featureCover">
+
+<div class="bookCover">
+
+<div class="top">
+خالد كرومي
+</div>
+
+<div class="clock">
+◷
+</div>
+
+<h2>
+ملحمة<br>
+الوريث الأخير
+</h2>
+
+<small>
+رواية
+</small>
+
+</div>
+
+</div>
+
 
 <div>
-<div class="eyebrow">رواية خيال زمني ومغامرة</div>
-<h2>ملحمة الوريث الأخير</h2>
-<p>رواية تتحرك بين الحاضر والتاريخ، حيث ينتقل خالد من عام 2026 إلى الجزائر سنة 1958، ويصطدم بأسرار الساعات وحراس الزمن والرجل الرمادي. تتوسع الرحلة إلى أسئلة الذاكرة والاختيار، مع حضور ليلى كجزء أساسي من النسيج الزمني.</p>
 
-<div class="review-box">
-<strong>مراجعة الموقع:</strong>
-رواية تعتمد على التشويق والانتقال بين الأزمنة، وتجمع المغامرة مع التاريخ والذاكرة والعاطفة. أكثر ما يميزها هو فكرة الساعات المتعددة والبحث عن الحقيقة عبر محطات زمنية مختلفة.
+<div class="kicker">
+العمل الرئيسي
 </div>
 
-<div class="hero-actions">
-<button class="btn primary" onclick="showPayment()">🛒 شراء — 900 دج</button>
-<button class="btn" onclick="showOwnReview()">📖 اقرأ المراجعة</button>
+<h2>
+ملحمة الوريث الأخير
+</h2>
+
+<p>
+رواية فانتازيا وزمن وذاكرة،
+تتنقل بين 2026 والجزائر سنة 1958
+والأندلس سنة 1492، وتضع البطل
+أمام أسرار الزمن واختيارات تغيّر الواقع.
+</p>
+
+<div class="price">
+900 دج
 </div>
+
+<div class="pay">
+
+الدفع عبر CCP:
+
+<b>42657077</b>
+
+—
+
+المفتاح:
+
+<b>70</b>
+
+<br>
+
+<a
+class="btn whatsapp"
+style="margin-top:10px"
+href="https://wa.me/213657327448?text=السلام%20عليكم،%20أريد%20شراء%20ملحمة%20الوريث%20الأخير%20بسعر%20900%20دج.%20سأرسل%20إثبات%20الدفع."
+target="_blank">
+
+📲 إرسال إثبات الدفع عبر واتساب
+
+</a>
+
 </div>
+
 </div>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="free">
-<div class="section-head">
+
+<section id="popular">
+
+<div class="wrap">
+
+<div class="sectionHead">
+
 <div>
-<h2>📚 أكثر من 1000 عمل مجاني</h2>
-<p>فهرس يتصل بمصدر مفتوح ويعرض الأعمال المجانية بدل استضافة نسخ غير مرخصة على موقعك.</p>
-</div>
-<span class="pill" id="apiStatus">جارٍ تحميل المكتبة...</span>
+
+<h2>
+🏆 كلاسيكيات عالمية
+</h2>
+
+<p>
+كتب مشهورة مع صور أغلفة وروابط قراءة مباشرة.
+</p>
+
 </div>
 
-<div class="library-tools">
-<input id="freeSearch" class="library-search" placeholder="ابحث داخل المكتبة المجانية بالعنوان أو المؤلف" oninput="filterFree()">
-<button class="filter active" onclick="freeLang='all';filterFree();this.parentElement.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));this.classList.add('active')">الكل</button>
-<button class="filter" onclick="freeLang='en';filterFree();this.parentElement.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));this.classList.add('active')">English</button>
-<button class="filter" onclick="freeLang='fr';filterFree();this.parentElement.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));this.classList.add('active')">Français</button>
 </div>
 
-<div id="freeGrid" class="free-grid"></div>
-<div id="freeLoading" class="loading">⏳ نحضّر لك آلاف العناوين المجانية...</div>
-<button id="loadMore" class="btn primary loadmore" style="display:none" onclick="renderMore()">عرض المزيد</button>
-
-<div class="source-note">
-المكتبة المجانية تستخدم بيانات Gutendex المرتبطة بفهرس Project Gutenberg. حالة حقوق النشر قد تختلف حسب البلد؛ الموقع يربط بالمصدر الأصلي ولا يبيع هذه الأعمال. تحقق من الترخيص المحلي قبل إعادة التوزيع.
+<div class="grid" id="featured">
 </div>
+
+</div>
+
 </section>
 
-<section id="famous-free">
-<div class="section-head">
+
+<section id="books">
+
+<div class="wrap">
+
+<div class="sectionHead">
+
 <div>
-<h2>🏆 روايات عالمية مجانية ومشهورة</h2>
-<p>مختارات من أعمال كلاسيكية متاحة للقراءة عبر مصادر عامة مفتوحة مثل Project Gutenberg وStandard Ebooks.</p>
-</div>
-<span class="pill">روابط مباشرة</span>
+
+<h2>
+📚 المكتبة
+</h2>
+
+<p>
+ابحث عن الروايات والكتب والكتّاب.
+</p>
+
 </div>
 
-<div class="curated-grid" id="curatedGrid"></div>
-
-<div class="legal-mini">
-⚠️ كلمة «مجانية» هنا تعني أن العمل متاح عبر المصدر المفتوح المشار إليه. حقوق النشر تختلف حسب البلد، لذلك تحقق من الوضع القانوني المحلي قبل إعادة الاستضافة أو إعادة التوزيع. الموقع يربط بالمصادر ولا يستضيف نسخًا غير مرخصة.
 </div>
 
-<div class="source-links">
-<a class="btn" href="https://www.gutenberg.org/" target="_blank" rel="noopener">📚 Project Gutenberg</a>
-<a class="btn" href="https://standardebooks.org/" target="_blank" rel="noopener">✨ Standard Ebooks</a>
-</div>
-</section>
 
-<section id="reviews">
-<div class="section-head">
-<div>
-<h2>🎬 مراجعات روايات معروفة</h2>
-<p>الروايات المحمية بحقوق النشر تُعرض كمعلومات ومراجعات فقط، دون توفير نسخ كاملة غير مرخصة.</p>
-</div>
-<span class="pill">مراجعة فقط</span>
-</div>
-<div class="review-grid" id="reviewGrid"></div>
-</section>
+<div class="search">
 
-<section id="about">
-<div class="about">
-<h2>عن مكتبة خالد كرومي</h2>
-<p>هذه ليست مجرد صفحة كاتب؛ إنها واجهة مكتبة أدبية شخصية. ستجد فيها <strong>ملحمة الوريث الأخير</strong> كعمل أصلي مدفوع، ومراجعات للروايات المعروفة، ومكتبة مجانية تصل إلى أكثر من 1000 عمل من مصدر مفتوح عند توفر البيانات.</p>
-<p>الأعمال المحمية بحقوق النشر لا يتم رفع ملفاتها الكاملة هنا. أما الكتب المجانية فتُعرض بروابط المصدر الأصلي بدل نسخ غير مصرح بها.</p>
+<input
+id="q"
+placeholder="🔎 ابحث باسم الرواية أو الكاتب..."
+>
+
+<select id="lang">
+
+<option value="">
+كل اللغات
+</option>
+
+<option value="en">
+English
+</option>
+
+<option value="fr">
+Français
+</option>
+
+<option value="es">
+Español
+</option>
+
+</select>
+
 </div>
+
+
+<div class="grid" id="library">
+
+<div class="empty">
+جاري تحميل الكتب والأغلفة...
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 </main>
 
-<footer>
-© 2026 <strong style="color:var(--gold)">خالد كرومي</strong> — مكتبة أدبية شخصية<br>
-<small>تصميم عربي حديث • قراءة • مراجعات • كتب مجانية</small>
+
+<footer id="contact">
+
+<div class="wrap">
+
+<strong>
+خالد كرومي
+</strong>
+
+<div>
+كاتب وروائي — ملحمة الوريث الأخير
+</div>
+
+<div>
+الكتب المجانية مرتبطة بمصادرها الأصلية.
+</div>
+
+</div>
+
 </footer>
 
-<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
-<div class="dialog">
-<button class="close" onclick="closeModal()">×</button>
-<div id="modalContent"></div>
-</div>
-</div>
-
-<div class="toast" id="toast">تم النسخ</div>
 
 <script>
 
-const WA='213657327448';
-let currentFree=[];
-let visible=0;
-let freeLang='all';
+const featured = [
 
-const reviews=[
-['البؤساء','فيكتور هوغو','دراما اجتماعية','رواية واسعة عن الفقر والعدالة والخلاص، وتبني شخصياتها وسط صراع أخلاقي وإنساني كبير.'],
-['الجريمة والعقاب','فيودور دوستويفسكي','نفسية / فلسفية','تدخل عميق في الذنب والضمير والعواقب النفسية بعد جريمة تغيّر حياة بطلها.'],
-['مئة عام من العزلة','غابرييل غارسيا ماركيز','واقعية سحرية','ملحمة عائلية تمزج التاريخ والذاكرة والغرابة داخل عالم أدبي شديد الخصوصية.'],
-['الخيميائي','باولو كويلو','رحلة / تأمل','حكاية رمزية عن الحلم والبحث عن المعنى والإصرار على الوصول إلى الغاية.'],
-['1984','جورج أورويل','ديستوبيا','رواية سياسية قاتمة عن المراقبة واللغة والسلطة والسيطرة على الحقيقة.'],
-['الأبله','فيودور دوستويفسكي','دراما نفسية','تستكشف البراءة والتعاطف والصراع بين الخير والمجتمع من خلال شخصية استثنائية.'],
-['الحب في زمن الكوليرا','غابرييل غارسيا ماركيز','رومانسية','تأمل طويل في الحب والزمن والانتظار وتغير الإنسان عبر العقود.'],
-['رجال في الشمس','غسان كنفاني','رواية عربية','عمل مكثف عن اللجوء والفقد والاختيارات الصعبة، بلغة رمزية مؤثرة.'],
-['عائد إلى حيفا','غسان كنفاني','رواية عربية','رواية إنسانية تطرح أسئلة الهوية والذاكرة والمسؤولية من خلال عائلة ممزقة.'],
-['ذاكرة الجسد','أحلام مستغانمي','رواية عربية','لغة شاعرية وعاطفة وذاكرة تتقاطع مع التاريخ والمدينة والحب.'],
-['The Great Gatsby','F. Scott Fitzgerald','Classic review','رواية عن الحلم الأمريكي والطبقة والحب والصورة التي يصنعها الإنسان عن نفسه.'],
-['The Catcher in the Rye','J. D. Salinger','Coming of age','تجربة داخلية عن الاغتراب والنضج والبحث عن الصدق وسط عالم يراه البطل زائفًا.'],
-['The Kite Runner','Khaled Hosseini','Drama review','صداقة وندم وفداء، مع خلفية تاريخية تمنح القصة ثقلًا عاطفيًا.'],
-['The Book Thief','Markus Zusak','Historical review','حكاية عن الكتب والإنسانية وسط الحرب، وتبرز قوة الكلمات في أحلك الظروف.'],
-['The Alchemist','Paulo Coelho','Symbolic review','رحلة رمزية بسيطة في ظاهرها، لكنها تدور حول الحلم والإيمان بالطريق.'],
-['The Little Prince','Antoine de Saint-Exupéry','Philosophical review','عمل قصير المدى عميق الدلالة عن الصداقة والحب ونظرة الإنسان إلى العالم.'],
-['One Hundred Years of Solitude','Gabriel García Márquez','Magical realism','عالم عائلي واسع تتكرر فيه الذكريات والأسماء والأحداث في دورة أدبية فريدة.'],
-['The Stranger','Albert Camus','Philosophical review','رواية وجودية باردة ومركزة تضع القارئ أمام أسئلة العبث واللامبالاة والمعنى.'],
-['The Picture of Dorian Gray','Oscar Wilde','Gothic review','تأمل في الجمال والرغبة والثمن الأخلاقي الذي قد يدفعه الإنسان خلف صورته المثالية.'],
-['Dracula','Bram Stoker','Gothic review','من كلاسيكيات الرعب القوطي، تجمع الرسائل والمذكرات في مواجهة أسطورة مصاص الدماء.']
+["كبرياء وهوى","Jane Austen",1342],
+["موبي ديك","Herman Melville",2701],
+["الجريمة والعقاب","Fyodor Dostoyevsky",2554],
+["مغامرات شرلوك هولمز","Arthur Conan Doyle",1661],
+["أليس في بلاد العجائب","Lewis Carroll",11],
+["فرانكنشتاين","Mary Shelley",84],
+["دراكولا","Bram Stoker",345],
+["الأوديسة","Homer",1727],
+["روميو وجولييت","William Shakespeare",1513],
+["جين آير","Charlotte Brontë",1260],
+["البؤساء","Victor Hugo",135],
+["كونت مونت كريستو","Alexandre Dumas",1184],
+["الفرسان الثلاثة","Alexandre Dumas",1257],
+["حول العالم في 80 يومًا","Jules Verne",103],
+["ديفيد كوبرفيلد","Charles Dickens",766],
+["قصة مدينتين","Charles Dickens",98],
+["الأمير الصغير","Antoine de Saint-Exupéry",17930],
+["الأبله","Fyodor Dostoyevsky",2638],
+["آنا كارنينا","Leo Tolstoy",1399],
+["الحرب والسلام","Leo Tolstoy",2600],
+["جزيرة الكنز","Robert Louis Stevenson",120],
+["أحدب نوتردام","Victor Hugo",2610]
+
 ];
 
-const curated=[
-['كبرياء وهوى','Jane Austen',1342],
-['موبي ديك','Herman Melville',2701],
-['الجريمة والعقاب','Fyodor Dostoevsky',2554],
-['مغامرات شرلوك هولمز','Arthur Conan Doyle',1661],
-['أليس في بلاد العجائب','Lewis Carroll',11],
-['فرانكنشتاين','Mary Shelley',84],
-['دراكولا','Bram Stoker',345],
-['الأوديسة','Homer',1727],
-['روميو وجولييت','William Shakespeare',1513],
-['جين آير','Charlotte Brontë',1260],
-['البؤساء','Victor Hugo',135],
-['كونت مونت كريستو','Alexandre Dumas',1184],
-['الفرسان الثلاثة','Alexandre Dumas',1257],
-['حول العالم في 80 يومًا','Jules Verne',103],
-['ديفيد كوبرفيلد','Charles Dickens',766],
-['قصة مدينتين','Charles Dickens',98],
-['الأمير الصغير','Antoine de Saint-Exupéry',17930],
-['الأبله','Fyodor Dostoevsky',2638],
-['آنا كارنينا','Leo Tolstoy',1399],
-['الحرب والسلام','Leo Tolstoy',2600],
-['مغامرات هاكلبيري فن','Mark Twain',76],
-['الأمير والفقير','Mark Twain',1837],
-['جزيرة الكنز','Robert Louis Stevenson',120],
-['أحدب نوتردام','Victor Hugo',2610]
-];
 
-function renderCurated(){
-const el=document.getElementById('curatedGrid');
-el.innerHTML=curated.map((b,i)=>`
-<article class="curated-card">
-<div class="curated-cover">${escapeHtml(b[0])}</div>
-<div class="curated-body">
-<h3>${escapeHtml(b[0])}</h3>
-<p>${escapeHtml(b[1])} • كتاب كلاسيكي</p>
-<div class="curated-actions">
-<a class="mini-btn gold" href="https://www.gutenberg.org/ebooks/${b[2]}" target="_blank" rel="noopener">📖 قراءة</a>
-<a class="mini-btn" href="https://www.gutenberg.org/ebooks/${b[2]}" target="_blank" rel="noopener">المصدر</a>
-</div>
-</div>
-</article>`).join('')
+function cover(id){
+
+return `https://www.gutenberg.org/cache/epub/${id}/pg${id}.cover.medium.jpg`;
+
 }
 
-function escapeHtml(s=''){
-return s.replace(/[&<>'"]/g,c=>({
-'&':'&amp;',
-'<':'&lt;',
-'>':'&gt;',
-"'":'&#39;',
-'"':'&quot;'
-}[c]))
+
+function link(id){
+
+return `https://www.gutenberg.org/ebooks/${id}`;
+
 }
 
-function showToast(t='تم النسخ'){
-const x=document.getElementById('toast');
-x.textContent=t;
-x.classList.add('show');
-setTimeout(()=>x.classList.remove('show'),1600)
-}
 
-function copyText(t){
-navigator.clipboard?.writeText(t);
-showToast('تم نسخ الرقم')
-}
-
-function showPayment(){
-document.getElementById('modalContent').innerHTML=`
-<div class="eyebrow">شراء الرواية</div>
-<h2>ملحمة الوريث الأخير</h2>
-<p>السعر: <strong style="color:var(--gold2);font-size:24px">900 دج</strong></p>
-<div class="paybox">
-<h3 style="color:var(--gold2)">الدفع عبر CCP / BaridiMob</h3>
-<div class="payrow">
-<span>رقم CCP</span>
-<strong>42657077</strong>
-<button class="copy" onclick="copyText('42657077')">نسخ</button>
-</div>
-<div class="payrow">
-<span>المفتاح</span>
-<strong>70</strong>
-<button class="copy" onclick="copyText('70')">نسخ</button>
-</div>
-</div>
-<p>بعد التحويل، أرسل إثبات الدفع عبر واتساب لاستلام النسخة الرقمية.</p>
-<a class="btn whatsapp" href="https://wa.me/${WA}?text=${encodeURIComponent('مرحبًا، قمت بدفع 900 دج لشراء رواية ملحمة الوريث الأخير، وسأرسل إثبات الدفع.')}" target="_blank" rel="noopener">📲 إرسال إثبات الدفع عبر WhatsApp</a>
-`;
-openModal()
-}
-
-function showOwnReview(){
-document.getElementById('modalContent').innerHTML=`
-<div class="eyebrow">مراجعة العمل الأصلي</div>
-<h2>ملحمة الوريث الأخير</h2>
-<p>رواية خيال زمني ومغامرة تبدأ مع خالد في عام 2026، ثم تقوده إلى الجزائر سنة 1958 أثناء حرب التحرير، حيث يلتقي رجلًا يعرف اسمه. تتوسع الحكاية إلى أسرار الساعات وحراس الزمن، ثم إلى محطات تاريخية أخرى، مع حضور ليلى وفكرة الذاكرة والاختيار.</p>
-<p><strong style="color:var(--gold2)">انطباع:</strong> نقطة القوة الأساسية هي بناء لغز زمني متدرج يسمح للرواية بالانتقال بين المغامرة والتاريخ والعاطفة، مع سؤال متكرر: ماذا يحدث عندما يصبح تغيير الماضي ممكنًا؟</p>
-<button class="btn primary" onclick="showPayment()">🛒 شراء الرواية — 900 دج</button>
-`;
-openModal()
-}
-
-function openModal(){
-document.getElementById('modal').classList.add('show')
-}
-
-function closeModal(){
-document.getElementById('modal').classList.remove('show')
-}
-
-function jumpSearch(){
-document.getElementById('free').scrollIntoView();
-document.getElementById('freeSearch').focus();
-document.getElementById('freeSearch').value=document.getElementById('topSearch').value;
-filterFree()
-}
-
-function renderReviews(){
-document.getElementById('reviewGrid').innerHTML=reviews.map((r,i)=>`
-<article class="review-card">
-<div class="type">مراجعة فقط</div>
-<h3>${escapeHtml(r[0])}</h3>
-<div style="color:#8e96a1;font-size:12px">${escapeHtml(r[1])} • ${escapeHtml(r[2])}</div>
-<p>${escapeHtml(r[3])}</p>
-<button class="mini-btn gold" onclick="reviewModal(${i})">اقرأ المراجعة</button>
-</article>`).join('')
-}
-
-function reviewModal(i){
-const r=reviews[i];
-document.getElementById('modalContent').innerHTML=`
-<div class="eyebrow">مراجعة أدبية</div>
-<h2>${escapeHtml(r[0])}</h2>
-<p><strong>المؤلف:</strong> ${escapeHtml(r[1])}</p>
-<p>${escapeHtml(r[3])}</p>
-<div class="legal">هذه الصفحة للمراجعة والتعريف فقط. لا يتم توفير نسخة كاملة من الكتاب المحمي بحقوق النشر.</div>
-`;
-openModal()
-}
-
-async function loadFree(){
-const pages=Array.from({length:32},(_,i)=>i+1);
-let all=[];
-const endpoint=p=>`https://gutendex.com/books/?topic=fiction&copyright=false&sort=popular&page=${p}`;
-
-try{
-for(let i=0;i<pages.length;i+=6){
-const batch=pages.slice(i,i+6);
-const rs=await Promise.all(batch.map(p=>fetch(endpoint(p)).then(r=>r.ok?r.json():null).catch(()=>null)));
-rs.forEach(x=>{if(x?.results)all.push(...x.results)});
-if(all.length>=1000)break
-}
-
-const seen=new Set();
-
-currentFree=all.filter(b=>{
-if(seen.has(b.id))return false;
-seen.add(b.id);
-return true
-}).slice(0,1000);
-
-document.getElementById('freeCount').textContent=currentFree.length>=1000?'1000+':currentFree.length;
-document.getElementById('apiStatus').textContent=currentFree.length>=1000?'1000+ جاهز':'مكتبة مجانية جاهزة';
-document.getElementById('freeLoading').style.display='none';
-visible=0;
-renderMore();
-if(!currentFree.length)throw new Error('empty')
-
-}catch(e){
-document.getElementById('apiStatus').textContent='وضع احتياطي';
-document.getElementById('freeLoading').textContent='تعذر الاتصال بالمصدر الآن. جرّب تحديث الصفحة لاحقًا.'
-}
-}
-
-function cardHtml(b,n){
-const title=escapeHtml(b.title);
-const author=escapeHtml((b.authors||[]).map(a=>a.name).join(', ')||'مؤلف غير معروف');
-const img=b.formats?.['image/jpeg'];
-const read=b.formats?.['text/html']||b.formats?.['application/epub+zip']||`https://www.gutenberg.org/ebooks/${b.id}`;
-const lang=(b.languages||[])[0]||'';
+function card(title,author,id){
 
 return `
-<article class="free-card" data-title="${title.toLowerCase()} ${author.toLowerCase()}" data-lang="${lang}">
-<div class="free-cover">
-${img?`<img loading="lazy" src="${img}" alt="${title}">`:`<div style="font-family:'Playfair Display';font-size:18px;text-align:center;color:#e0b75f">${title}</div>`}
-<span class="num">#${n}</span>
+
+<article class="card">
+
+<div class="cover">
+
+<img
+loading="lazy"
+src="${cover(id)}"
+alt="غلاف ${title}"
+>
+
+<span class="tag">
+مجاني
+</span>
+
 </div>
-<div class="free-body">
-<h3>${title}</h3>
-<p>${author}</p>
-<div class="free-actions">
-<a class="mini-btn gold" href="${read}" target="_blank" rel="noopener">📖 قراءة</a>
-<a class="mini-btn" href="https://www.gutenberg.org/ebooks/${b.id}" target="_blank" rel="noopener">المصدر</a>
+
+
+<div class="cardBody">
+
+<h3>
+${title}
+</h3>
+
+<div class="author">
+${author}
 </div>
+
+
+<div class="cardBtns">
+
+<a
+class="mini main"
+href="${link(id)}"
+target="_blank"
+>
+📖 اقرأ
+</a>
+
+<a
+class="mini"
+href="${link(id)}"
+target="_blank"
+>
+المصدر
+</a>
+
 </div>
-</article>`
+
+</div>
+
+</article>
+
+`;
+
 }
 
-function renderMore(){
-const end=Math.min(visible+48,currentFree.length);
-document.getElementById('freeGrid').insertAdjacentHTML('beforeend',currentFree.slice(visible,end).map((b,i)=>cardHtml(b,visible+i+1)).join(''));
-visible=end;
-document.getElementById('loadMore').style.display=visible<currentFree.length?'block':'none';
-filterFree()
+
+document.getElementById("featured").innerHTML =
+featured.map(x => card(...x)).join("");
+
+
+let all=[];
+
+
+async function loadBooks(){
+
+try{
+
+let requests=[];
+
+for(let page=1;page<=8;page++){
+
+requests.push(
+
+fetch(
+`https://gutendex.com/books/?topic=fiction&copyright=false&sort=popular&page=${page}`
+)
+
+.then(response => response.json())
+
+);
+
 }
 
-function filterFree(){
-const q=(document.getElementById('freeSearch')?.value||'').toLowerCase().trim();
 
-document.querySelectorAll('.free-card').forEach(c=>{
-const okQ=c.dataset.title.includes(q);
-const okL=freeLang==='all'||c.dataset.lang===freeLang;
-c.style.display=okQ&&okL?'block':'none'
-})
+const pages =
+await Promise.all(requests);
+
+
+all =
+pages
+.flatMap(x => x.results)
+.filter(
+(book,index,array) =>
+array.findIndex(x => x.id === book.id) === index
+);
+
+
+render();
+
+}catch(error){
+
+document.getElementById("library").innerHTML = `
+
+<div class="empty">
+
+تعذر تحميل المكتبة الآن.
+
+<br>
+
+استعمل قسم الكلاسيكيات بالأعلى.
+
+</div>
+
+`;
+
 }
 
-renderCurated();
-renderReviews();
-loadFree();
+}
+
+
+function render(){
+
+const query =
+document
+.getElementById("q")
+.value
+.toLowerCase()
+.trim();
+
+
+const language =
+document
+.getElementById("lang")
+.value;
+
+
+const books =
+all.filter(book => {
+
+const title =
+(book.title || "").toLowerCase();
+
+
+const authors =
+(book.authors || [])
+.map(a => a.name.toLowerCase())
+.join(" ");
+
+
+const matchSearch =
+!query ||
+title.includes(query) ||
+authors.includes(query);
+
+
+const matchLanguage =
+!language ||
+(book.languages || []).includes(language);
+
+
+return matchSearch && matchLanguage;
+
+});
+
+
+const visible =
+books.slice(0,48);
+
+
+if(!visible.length){
+
+document.getElementById("library").innerHTML = `
+
+<div class="empty">
+
+لا توجد نتائج مطابقة.
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+document.getElementById("library").innerHTML =
+
+visible.map(book =>
+
+card(
+
+book.title,
+
+(book.authors || [])
+.map(a => a.name)
+.join("، ") ||
+"مؤلف غير معروف",
+
+book.id
+
+)
+
+).join("");
+
+}
+
+
+document
+.getElementById("q")
+.addEventListener("input",render);
+
+
+document
+.getElementById("lang")
+.addEventListener("change",render);
+
+
+loadBooks();
 
 </script>
+
 </body>
-  </html>
+</html>
