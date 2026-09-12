@@ -3,35 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="خالد كرومي — كاتب وروائي ومؤلف ملحمة الوريث الأخير.">
-<title>خالد كرومي | مكتبة الروايات والكتب</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<title>ملحمة الوريث الأخير | خالد كرومي</title>
 
 <style>
-:root{
---bg:#07090d;
---panel:#10141b;
---panel2:#151b24;
---gold:#d8ad55;
---gold2:#f1d38a;
---text:#f5f2ea;
---muted:#aab1bc;
---line:#252d39;
-}
-
 *{box-sizing:border-box}
-
-html{scroll-behavior:smooth}
 
 body{
 margin:0;
-background:
-radial-gradient(circle at 80% 0%,#21190f 0,#07090d 40%);
-color:var(--text);
-font-family:Cairo,Arial,sans-serif;
+background:#07090d;
+color:#fff;
+font-family:Arial,Tahoma,sans-serif;
+line-height:1.9;
 }
 
 a{
@@ -39,419 +21,233 @@ text-decoration:none;
 color:inherit;
 }
 
-.wrap{
-width:min(1180px,92%);
+.container{
+width:min(1100px,92%);
 margin:auto;
 }
 
-header{
+nav{
 position:sticky;
 top:0;
-z-index:50;
-background:rgba(7,9,13,.94);
-backdrop-filter:blur(15px);
-border-bottom:1px solid var(--line);
+z-index:20;
+background:rgba(5,7,10,.95);
+border-bottom:1px solid #333;
 }
 
 .nav{
-height:72px;
 display:flex;
-align-items:center;
 justify-content:space-between;
-gap:20px;
+align-items:center;
+padding:15px 0;
 }
 
-.brand{
-font-size:23px;
-font-weight:800;
+.logo{
+font-weight:bold;
+color:#e3bd64;
+font-size:18px;
 }
 
-.brand span{
-color:var(--gold);
-}
-
-nav{
+.menu{
 display:flex;
 gap:20px;
-font-size:14px;
-color:#d8dce3;
 }
 
-nav a:hover{
-color:var(--gold);
-}
-
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:12px 20px;
-border-radius:12px;
-font-weight:800;
-border:1px solid var(--gold);
-cursor:pointer;
-}
-
-.primary{
-background:var(--gold);
-color:#17120a;
-}
-
-.ghost{
-color:var(--gold2);
-background:transparent;
+.menu a:hover{
+color:#e3bd64;
 }
 
 .hero{
-padding:65px 0 45px;
+padding:70px 0;
 }
 
-.heroBox{
+.hero-grid{
 display:grid;
-grid-template-columns:1.15fr .85fr;
-gap:35px;
+grid-template-columns:1fr 1fr;
+gap:50px;
 align-items:center;
 }
 
-.kicker{
-color:var(--gold);
-font-weight:800;
+.small{
+color:#e3bd64;
+font-weight:bold;
 }
 
-.hero h1{
-font-family:"Playfair Display",serif;
-font-size:clamp(45px,7vw,80px);
-line-height:1;
-margin:12px 0;
+h1{
+font-size:65px;
+line-height:1.1;
+margin:15px 0;
 }
 
-.hero p{
-color:var(--muted);
-font-size:18px;
-line-height:2;
+.lead{
+font-size:19px;
+color:#ccc;
 }
 
-.actions{
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin:20px 0;
+}
+
+.tag{
+padding:5px 15px;
+border:1px solid #6d5324;
+border-radius:30px;
+color:#e5c875;
+background:#151109;
+}
+
+.buttons{
 display:flex;
 gap:12px;
 flex-wrap:wrap;
 margin-top:25px;
 }
 
-.heroCover{
-min-height:440px;
-border-radius:22px;
-overflow:hidden;
-background:linear-gradient(145deg,#2b2115,#090b0e 70%);
-border:1px solid #4c3a20;
-box-shadow:0 25px 70px #0009;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:28px;
-}
-
-.bookCover{
-width:min(290px,75%);
-aspect-ratio:2/3;
-background:
-linear-gradient(145deg,#151515,#332617);
-border:3px solid var(--gold);
-box-shadow:0 20px 45px #000;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:space-between;
-text-align:center;
-padding:28px 20px;
-}
-
-.bookCover .top{
-font-size:12px;
-color:var(--gold2);
-letter-spacing:2px;
-}
-
-.bookCover h2{
-font-family:"Playfair Display",serif;
-font-size:32px;
-line-height:1.35;
-margin:0;
-}
-
-.clock{
-font-size:75px;
-filter:drop-shadow(0 0 15px #d8ad5566);
-}
-
-.bookCover small{
-color:#ddd;
-}
-
-section{
-padding:45px 0;
-}
-
-.sectionHead{
-display:flex;
-justify-content:space-between;
-align-items:end;
-margin-bottom:22px;
-}
-
-.sectionHead h2{
-font-size:30px;
-margin:0;
-}
-
-.sectionHead p{
-color:var(--muted);
-}
-
-.search{
-display:flex;
-gap:10px;
-margin:20px 0;
-}
-
-.search input,
-.search select{
-flex:1;
-background:var(--panel);
-color:var(--text);
-border:1px solid var(--line);
-padding:14px;
+.btn{
+padding:13px 22px;
 border-radius:12px;
-outline:none;
+font-weight:bold;
+display:inline-block;
 }
 
-.search input:focus{
-border-color:var(--gold);
+.primary{
+background:linear-gradient(135deg,#f0cf75,#a87522);
+color:#090909;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:18px;
-}
-
-.card{
-background:linear-gradient(180deg,#121720,#0d1117);
-border:1px solid var(--line);
-border-radius:16px;
-overflow:hidden;
-transition:.25s;
-display:flex;
-flex-direction:column;
-}
-
-.card:hover{
-transform:translateY(-5px);
-border-color:#8e6c35;
-box-shadow:0 18px 35px #0008;
-}
-
-.cover{
-aspect-ratio:2/3;
-background:#1a1f27;
-position:relative;
-overflow:hidden;
+.secondary{
+border:1px solid #444;
+background:#11151b;
 }
 
 .cover img{
 width:100%;
-height:100%;
-object-fit:cover;
+max-width:520px;
 display:block;
+margin:auto;
+border-radius:18px;
+box-shadow:0 25px 70px rgba(0,0,0,.7);
 }
 
-.tag{
-position:absolute;
-top:9px;
-right:9px;
-background:#080a0dcc;
-border:1px solid #ffffff22;
-border-radius:999px;
-padding:4px 8px;
-font-size:11px;
+section{
+padding:70px 0;
 }
 
-.cardBody{
-padding:13px;
+h2{
+font-size:40px;
+margin-bottom:25px;
+color:#e5c875;
 }
 
-.card h3{
-font-size:16px;
-margin:0 0 5px;
-line-height:1.55;
+.card{
+background:#10141b;
+border:1px solid #292f38;
+border-radius:20px;
+padding:30px;
 }
 
-.author{
-color:var(--muted);
-font-size:12px;
-min-height:38px;
-}
-
-.cardBtns{
-display:flex;
-gap:7px;
-margin-top:11px;
-}
-
-.mini{
-flex:1;
-padding:8px;
-border-radius:9px;
-text-align:center;
-font-size:12px;
-font-weight:800;
-border:1px solid #554525;
-color:var(--gold2);
-}
-
-.mini.main{
-background:var(--gold);
-color:#17120a;
-}
-
-.feature{
-background:linear-gradient(135deg,#17140f,#0f1319);
-border:1px solid #5d4725;
-border-radius:22px;
-padding:26px;
+.about{
 display:grid;
-grid-template-columns:190px 1fr;
+grid-template-columns:1.4fr 1fr;
 gap:25px;
-align-items:center;
 }
 
-.featureCover{
-width:190px;
-aspect-ratio:2/3;
+.rating{
+font-size:27px;
+color:#e5c875;
 }
 
-.featureCover .bookCover{
-width:100%;
-height:100%;
-padding:17px;
+.info{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:25px;
 }
 
-.featureCover .bookCover h2{
-font-size:22px;
+.info div{
+background:#090c11;
+padding:15px;
+border-radius:12px;
+text-align:center;
 }
 
-.featureCover .clock{
-font-size:45px;
+.info strong{
+display:block;
+color:#e5c875;
+font-size:20px;
 }
 
-.feature h2{
-font-size:31px;
-margin:0 0 8px;
-}
-
-.feature p{
-color:var(--muted);
-line-height:1.9;
+.order{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
 }
 
 .price{
-font-size:28px;
-color:var(--gold2);
-font-weight:800;
+font-size:45px;
+font-weight:bold;
+color:#e5c875;
 }
 
-.pay{
-margin-top:18px;
-background:#0b0f14;
-border:1px solid var(--line);
+.social{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.social a{
+padding:20px;
+background:#10141b;
+border:1px solid #292f38;
 border-radius:15px;
-padding:15px;
-}
-
-.pay b{
-color:var(--gold2);
-}
-
-.whatsapp{
-background:#218c4b!important;
-border-color:#218c4b!important;
-color:white!important;
-}
-
-.empty{
-grid-column:1/-1;
 text-align:center;
-color:var(--muted);
-padding:40px;
+font-size:18px;
+font-weight:bold;
+}
+
+.social a:hover{
+border-color:#e5c875;
+}
+
+.note{
+color:#aaa;
 }
 
 footer{
-border-top:1px solid var(--line);
-margin-top:50px;
-padding:35px 0;
-color:var(--muted);
+border-top:1px solid #292f38;
+padding:30px;
 text-align:center;
+color:#888;
 }
 
-@media(max-width:1000px){
-.grid{
-grid-template-columns:repeat(4,1fr);
-}
-}
+@media(max-width:800px){
 
-@media(max-width:760px){
-
-nav{
+.menu{
 display:none;
 }
 
-.heroBox{
+.hero-grid,
+.about,
+.order{
 grid-template-columns:1fr;
 }
 
-.heroCover{
-min-height:380px;
+h1{
+font-size:45px;
 }
 
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.feature{
-grid-template-columns:120px 1fr;
-}
-
-.featureCover{
-width:120px;
-}
-
-.sectionHead{
-display:block;
-}
-
-.search{
-flex-direction:column;
-}
-
-}
-
-@media(max-width:430px){
-
-.grid{
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-}
-
-.card h3{
-font-size:14px;
-}
-
-.feature{
+.info{
 grid-template-columns:1fr;
 }
 
-.featureCover{
-margin:auto;
+.social{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding-top:40px;
 }
 
 }
@@ -460,86 +256,142 @@ margin:auto;
 
 <body>
 
-<header>
-<div class="wrap nav">
-
-<a class="brand" href="#top">
-خالد <span>كرومي</span>
-</a>
-
 <nav>
-<a href="#top">الرئيسية</a>
-<a href="#novel">روايتي</a>
-<a href="#books">المكتبة</a>
-<a href="#popular">الأشهر</a>
-<a href="#contact">تواصل</a>
-</nav>
+<div class="container nav">
 
-<a class="btn ghost" href="#books">
-ابدأ القراءة
-</a>
+<div class="logo">
+خالد كرومي
+</div>
+
+<div class="menu">
+<a href="#book">الرواية</a>
+<a href="#about">النبذة</a>
+<a href="#order">الطلب</a>
+<a href="#social">التواصل</a>
+</div>
 
 </div>
-</header>
+</nav>
 
 
-<main id="top">
+<header class="hero" id="book">
 
-<section class="hero">
-
-<div class="wrap heroBox">
+<div class="container hero-grid">
 
 <div>
 
-<div class="kicker">
-كاتب وروائي جزائري
+<div class="small">
+الرواية الجديدة للكاتب خالد كرومي
 </div>
 
 <h1>
-خالد كرومي
-</h1>
-
-<p>
-مساحة أدبية حقيقية للقراءة والاكتشاف،
-تضم رواية <b>ملحمة الوريث الأخير</b>
-وكلاسيكيات عالمية مع أغلفة وصور وروابط قراءة مباشرة.
-</p>
-
-<div class="actions">
-
-<a class="btn primary" href="#novel">
-اكتشف روايتي
-</a>
-
-<a class="btn ghost" href="#books">
-تصفح الكتب
-</a>
-
-</div>
-
-</div>
-
-
-<div class="heroCover">
-
-<div class="bookCover">
-
-<div class="top">
-رواية خالد كرومي
-</div>
-
-<div class="clock">
-◷
-</div>
-
-<h2>
 ملحمة<br>
 الوريث الأخير
+</h1>
+
+<p class="lead">
+حين يصبح الزمن بابًا، تصبح الذاكرة مفتاحًا...
+رحلة تجمع بين الغموض والتاريخ والحب والسفر عبر الزمن.
+</p>
+
+<div class="tags">
+<span class="tag">سفر عبر الزمن</span>
+<span class="tag">غموض</span>
+<span class="tag">تاريخ</span>
+<span class="tag">حب</span>
+</div>
+
+<div class="buttons">
+
+<a class="btn primary" href="#order">
+اطلب الرواية — 900 دج
+</a>
+
+<a class="btn secondary" href="#about">
+اكتشف الرواية
+</a>
+
+</div>
+
+</div>
+
+
+<div class="cover">
+
+<img
+src="https://i.imgur.com/REPLACE.jpg"
+alt="غلاف رواية ملحمة الوريث الأخير">
+
+</div>
+
+</div>
+
+</header>
+
+
+<section id="about">
+
+<div class="container">
+
+<h2>
+عن الرواية
 </h2>
 
-<small>
-الزمن • الذاكرة • الاختيار
-</small>
+<div class="about">
+
+<div class="card">
+
+<p>
+ملحمة الوريث الأخير رواية تجمع بين السفر عبر الزمن، والغموض، والتاريخ، والحب. يخوض خالد وليلى رحلة عبر عصور مختلفة بحثًا عن أسرار الساعات والبوابة الزمنية، فيلتقيان بمحطات تاريخية مؤثرة، ويكتشفان أن كل رحلة تحمل جزءًا من الحقيقة وماضي العائلة.
+</p>
+
+<p>
+وبينما يحاول خالد فهم دوره كحارس للزمن ومواجهة الظلال والأسرار التي تطارده، يكتشف أن أعظم المعارك ليست مع الزمن، بل مع النسيان والخوف والندم.
+</p>
+
+<p>
+تتداخل رحلة خالد وليلى مع تاريخ الأندلس والثورة الجزائرية وذكريات العائلة، حتى يصبح خالد جزءًا من إرث أكبر منه.
+</p>
+
+<p>
+وفي النهاية، تنتقل الحكاية إلى آية، ابنتهما، التي تحمل إرث أبيها وتبدأ رحلة جديدة عبر الذاكرة والكتابة، لتثبت أن ما يتركه الإنسان من حب وتضحية لا يموت، وأن الذاكرة الحقيقية تعيش فيمن يروي الحكاية ويحملها إلى الأجيال القادمة.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+تقييم الرواية
+</h3>
+
+<div class="rating">
+★★★★★
+</div>
+
+<p>
+غلاف الرواية يعكس أجواء الغموض والزمن والذاكرة، من خلال الساعة المتحطمة والمشهد المظلم والشخصية التي تسير نحو المجهول.
+</p>
+
+<div class="info">
+
+<div>
+<strong>900 دج</strong>
+السعر
+</div>
+
+<div>
+<strong>خالد كرومي</strong>
+الكاتب
+</div>
+
+<div>
+<strong>رواية</strong>
+التصنيف
+</div>
+
+</div>
 
 </div>
 
@@ -550,479 +402,133 @@ margin:auto;
 </section>
 
 
-<section id="novel">
+<section id="order">
 
-<div class="wrap">
-
-<div class="feature">
-
-<div class="featureCover">
-
-<div class="bookCover">
-
-<div class="top">
-خالد كرومي
-</div>
-
-<div class="clock">
-◷
-</div>
+<div class="container">
 
 <h2>
-ملحمة<br>
-الوريث الأخير
+اطلب نسختك
 </h2>
 
-<small>
-رواية
-</small>
-
-</div>
-
-</div>
+<div class="order">
 
 
-<div>
+<div class="card">
 
-<div class="kicker">
-العمل الرئيسي
-</div>
-
-<h2>
-ملحمة الوريث الأخير
-</h2>
-
-<p>
-رواية فانتازيا وزمن وذاكرة،
-تتنقل بين 2026 والجزائر سنة 1958
-والأندلس سنة 1492، وتضع البطل
-أمام أسرار الزمن واختيارات تغيّر الواقع.
+<p class="note">
+سعر الرواية
 </p>
 
 <div class="price">
 900 دج
 </div>
 
-<div class="pay">
-
-الدفع عبر CCP:
-
-<b>42657077</b>
-
-—
-
-المفتاح:
-
-<b>70</b>
-
-<br>
-
-<a
-class="btn whatsapp"
-style="margin-top:10px"
-href="https://wa.me/213657327448?text=السلام%20عليكم،%20أريد%20شراء%20ملحمة%20الوريث%20الأخير%20بسعر%20900%20دج.%20سأرسل%20إثبات%20الدفع."
-target="_blank">
-
-📲 إرسال إثبات الدفع عبر واتساب
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="popular">
-
-<div class="wrap">
-
-<div class="sectionHead">
-
-<div>
-
-<h2>
-🏆 كلاسيكيات عالمية
-</h2>
-
-<p>
-كتب مشهورة مع صور أغلفة وروابط قراءة مباشرة.
-</p>
-
-</div>
-
-</div>
-
-<div class="grid" id="featured">
-</div>
-
-</div>
-
-</section>
-
-
-<section id="books">
-
-<div class="wrap">
-
-<div class="sectionHead">
-
-<div>
-
-<h2>
-📚 المكتبة
-</h2>
-
-<p>
-ابحث عن الروايات والكتب والكتّاب.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="search">
-
-<input
-id="q"
-placeholder="🔎 ابحث باسم الرواية أو الكاتب..."
->
-
-<select id="lang">
-
-<option value="">
-كل اللغات
-</option>
-
-<option value="en">
-English
-</option>
-
-<option value="fr">
-Français
-</option>
-
-<option value="es">
-Español
-</option>
-
-</select>
-
-</div>
-
-
-<div class="grid" id="library">
-
-<div class="empty">
-جاري تحميل الكتب والأغلفة...
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-
-<footer id="contact">
-
-<div class="wrap">
-
-<strong>
-خالد كرومي
-</strong>
-
-<div>
-كاتب وروائي — ملحمة الوريث الأخير
-</div>
-
-<div>
-الكتب المجانية مرتبطة بمصادرها الأصلية.
-</div>
-
-</div>
-
-</footer>
-
-
-<script>
-
-const featured = [
-
-["كبرياء وهوى","Jane Austen",1342],
-["موبي ديك","Herman Melville",2701],
-["الجريمة والعقاب","Fyodor Dostoyevsky",2554],
-["مغامرات شرلوك هولمز","Arthur Conan Doyle",1661],
-["أليس في بلاد العجائب","Lewis Carroll",11],
-["فرانكنشتاين","Mary Shelley",84],
-["دراكولا","Bram Stoker",345],
-["الأوديسة","Homer",1727],
-["روميو وجولييت","William Shakespeare",1513],
-["جين آير","Charlotte Brontë",1260],
-["البؤساء","Victor Hugo",135],
-["كونت مونت كريستو","Alexandre Dumas",1184],
-["الفرسان الثلاثة","Alexandre Dumas",1257],
-["حول العالم في 80 يومًا","Jules Verne",103],
-["ديفيد كوبرفيلد","Charles Dickens",766],
-["قصة مدينتين","Charles Dickens",98],
-["الأمير الصغير","Antoine de Saint-Exupéry",17930],
-["الأبله","Fyodor Dostoyevsky",2638],
-["آنا كارنينا","Leo Tolstoy",1399],
-["الحرب والسلام","Leo Tolstoy",2600],
-["جزيرة الكنز","Robert Louis Stevenson",120],
-["أحدب نوتردام","Victor Hugo",2610]
-
-];
-
-
-function cover(id){
-
-return `https://www.gutenberg.org/cache/epub/${id}/pg${id}.cover.medium.jpg`;
-
-}
-
-
-function link(id){
-
-return `https://www.gutenberg.org/ebooks/${id}`;
-
-}
-
-
-function card(title,author,id){
-
-return `
-
-<article class="card">
-
-<div class="cover">
-
-<img
-loading="lazy"
-src="${cover(id)}"
-alt="غلاف ${title}"
->
-
-<span class="tag">
-مجاني
-</span>
-
-</div>
-
-
-<div class="cardBody">
-
 <h3>
-${title}
+الدفع عبر بريدي موب
 </h3>
 
-<div class="author">
-${author}
-</div>
+<p>
+للطلب، قم بالدفع عبر بريدي موب ثم تواصل معي عبر واتساب لتأكيد الطلب.
+</p>
 
-
-<div class="cardBtns">
-
-<a
-class="mini main"
-href="${link(id)}"
-target="_blank"
->
-📖 اقرأ
-</a>
+<p class="note">
+سيتم إضافة معلومات حساب بريدي موب هنا عند إدخالها.
+</p>
 
 <a
-class="mini"
-href="${link(id)}"
-target="_blank"
->
-المصدر
+class="btn primary"
+href="https://wa.me/213657327448?text=السلام%20عليكم،%20أريد%20طلب%20رواية%20ملحمة%20الوريث%20الأخير%20بسعر%20900%20دج"
+target="_blank">
+
+طلب عبر واتساب
+
 </a>
 
 </div>
 
+
+<div class="card">
+
+<h3>
+التواصل
+</h3>
+
+<p>
+واتساب:
+</p>
+
+<p style="font-size:25px;font-weight:bold">
+0657 327 448
+</p>
+
+<a
+class="btn secondary"
+href="tel:+213657327448">
+
+اتصال مباشر
+
+</a>
+
 </div>
 
-</article>
+</div>
 
-`;
+</div>
 
-}
-
-
-document.getElementById("featured").innerHTML =
-featured.map(x => card(...x)).join("");
+</section>
 
 
-let all=[];
+<section id="social">
 
+<div class="container">
 
-async function loadBooks(){
+<h2>
+تابع خالد كرومي
+</h2>
 
-try{
+<div class="social">
 
-let requests=[];
+<a
+href="https://www.facebook.com/profile.php?id=61590657726153"
+target="_blank">
 
-for(let page=1;page<=8;page++){
-
-requests.push(
-
-fetch(
-`https://gutendex.com/books/?topic=fiction&copyright=false&sort=popular&page=${page}`
-)
-
-.then(response => response.json())
-
-);
-
-}
-
-
-const pages =
-await Promise.all(requests);
-
-
-all =
-pages
-.flatMap(x => x.results)
-.filter(
-(book,index,array) =>
-array.findIndex(x => x.id === book.id) === index
-);
-
-
-render();
-
-}catch(error){
-
-document.getElementById("library").innerHTML = `
-
-<div class="empty">
-
-تعذر تحميل المكتبة الآن.
+📘 فيسبوك
 
 <br>
 
-استعمل قسم الكلاسيكيات بالأعلى.
+<span class="note">
+الصفحة الرسمية
+</span>
+
+</a>
+
+
+<a
+href="https://www.instagram.com/its__khaled__official?stkn=MXNsd21zdDdtbHlpMA=="
+target="_blank">
+
+📸 إنستغرام
+
+<br>
+
+<span class="note">
+@its__khaled__official
+</span>
+
+</a>
 
 </div>
 
-`;
-
-}
-
-}
-
-
-function render(){
-
-const query =
-document
-.getElementById("q")
-.value
-.toLowerCase()
-.trim();
-
-
-const language =
-document
-.getElementById("lang")
-.value;
-
-
-const books =
-all.filter(book => {
-
-const title =
-(book.title || "").toLowerCase();
-
-
-const authors =
-(book.authors || [])
-.map(a => a.name.toLowerCase())
-.join(" ");
-
-
-const matchSearch =
-!query ||
-title.includes(query) ||
-authors.includes(query);
-
-
-const matchLanguage =
-!language ||
-(book.languages || []).includes(language);
-
-
-return matchSearch && matchLanguage;
-
-});
-
-
-const visible =
-books.slice(0,48);
-
-
-if(!visible.length){
-
-document.getElementById("library").innerHTML = `
-
-<div class="empty">
-
-لا توجد نتائج مطابقة.
-
 </div>
 
-`;
-
-return;
-
-}
+</section>
 
 
-document.getElementById("library").innerHTML =
+<footer>
 
-visible.map(book =>
+© خالد كرومي — ملحمة الوريث الأخير
 
-card(
-
-book.title,
-
-(book.authors || [])
-.map(a => a.name)
-.join("، ") ||
-"مؤلف غير معروف",
-
-book.id
-
-)
-
-).join("");
-
-}
-
-
-document
-.getElementById("q")
-.addEventListener("input",render);
-
-
-document
-.getElementById("lang")
-.addEventListener("change",render);
-
-
-loadBooks();
-
-</script>
+</footer>
 
 </body>
 </html>
